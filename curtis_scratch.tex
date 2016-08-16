@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Masters/Doctoral Thesis 
+% LaTeX Template for GWU
+% Version 0.1 (07/07/2016)
+%
+% This template is based on a template by:
+% Brian Curtis (curtisbr@gwu.edu)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[
+letterpaper,
+12pt, % The default document font size, options: 10pt, 11pt, 12pt
+%oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
+%chapterinoneline,% Have the chapter title next to the number in one single line
+doublespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
+%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
+%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
+%liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
+%toctotoc, % Uncomment to add the main table of contents to the table of contents
+%parskip, % Uncomment to add space between paragraphs
+%nohyperref, % Uncomment to not load the hyperref package
+headsepline, % Uncomment to get a line under the header
+]{article}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{setspace}
+
+% Table of Contents (TOC)
+\setcounter{secnumdepth}{3} % this number depends on your depth of sections
+\setcounter{tocdepth}{3} % this number should be equal to secnumdepth in previous command
+\usepackage{tocloft}
+\renewcommand\cftloftitlefont{\normalsize\bfseries}
+\renewcommand\cftlottitlefont{\normalsize\bfseries}
+\usepackage{tocstyle}
+\renewcommand{\contentsname}{\centerline {\normalsize\bfseries Table of Contents}}
+\newtocstyle[standard][leaders]{mytocstyle}{\settocfeature[1]{entryhook}{\normalfont\bfseries}}
+\usetocstyle{mytocstyle}
+
+% Section
+\usepackage{sectsty}
+\sectionfont{\normalsize}
+\usepackage{enumitem}
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+
+% Graphics
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage[font=normalsize,labelfont=bf]{caption}
+
+% Use landscape if needed
+\usepackage{pdflscape}
+
+% Paragraph setup
+\usepackage{indentfirst}
+\setlength{\parindent}{3em}
+\setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{2.0}
+
+% References / Bibliography
+\usepackage[
+backend=biber,
+style=chicago-authordate,
+]{biblatex}
+\addbibresource{curtis_phd.bib}
+\AtBeginBibliography{\normalsize}
+
+
+
+%----------------------------------------------------------------------------------------
+%	DISSERTATION INFORMATION
+%----------------------------------------------------------------------------------------
+% Title of the Dissertation - use \ttitle elsewhere to print
+\newcommand{\ttitle}{A Sensitivity Analysis for Deriving Dynamic and Evolutionary Rules in an Artificial Immune System- Cellular Automata Model}
+
+% Author's name - use \authorname elsewhere to print
+\newcommand{\authorname}{Brian Curtis} 
+
+
+
+\begin{document}
+
+%\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+%
+%\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{\singlespacing\normalsize\bf\ttitle}
+\author{\normalsize\authorname{}}
+\date{}
+\maketitle
+\thispagestyle{empty}
+\begin{center}
+B.S. in Electrical Engineering, December 2005, New Mexico State University \\
+M.S. in System Engineering, May 2011, The George Washington University\\[\baselineskip]
+A Dissertation submitted to\\[\baselineskip]
+The Faculty of\\The School of Engineering and Applied Science\\ of The George
+Washington University\\ in partial satisfaction of the requirements\\ for the degree
+of Doctor of Philosophy\\[\baselineskip]
+January 31, 2009\\[\baselineskip]
+Dissertation directed by\\[\baselineskip]
+Dr. Christopher J. Willy\\Professor of Engineering Management \& Systems Engineering\\[\baselineskip]
+Dr. John Bischoff\\Professor of Engineering Management \& Systems Engineering\\[\baselineskip]
+
+\end{center}
+% display page numbers in the footer and centered. Start with roman numerals %
+\pagestyle{plain}
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+
+\end{document}
