@@ -1,0 +1,172 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+
+\usepackage{setspace}
+\setcounter{secnumdepth}{3} % this number depends on your depth of sections
+\setcounter{tocdepth}{3} % this number should be equal to secnumdepth in previous command
+
+\usepackage{tocloft}
+\renewcommand\cftloftitlefont{\normalsize\bfseries}
+\renewcommand\cftlottitlefont{\normalsize\bfseries}
+
+\usepackage{tocstyle}
+\renewcommand{\contentsname}{\centerline {\normalsize\bfseries Table of Contents}}
+\newtocstyle[standard][leaders]{mytocstyle}{\settocfeature[1]{entryhook}{\normalfont\bfseries}}
+\usetocstyle{mytocstyle}
+
+\usepackage{sectsty}
+\sectionfont{\normalsize}
+
+\usepackage{enumitem}
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+
+\begin{document}
+
+\title{\singlespacing\normalsize\bf This is a Sample Title Page for a Dissertation}
+\author{\normalsize by (Your Name)}
+\date{}
+\maketitle
+\thispagestyle{empty}
+
+\begin{center}
+B.S. in Mechanical Engineering, May 2000, Iowa State University \\
+M.S. in System Engineering, December 2003, The George Washington
+University\\[\baselineskip]
+
+A Dissertation submitted to\\[\baselineskip]
+
+The Faculty of\\The School of Engineering and Applied Science\\ of The George
+Washington University\\ in partial satisfaction of the requirements\\ for the degree
+of Doctor of Philosophy\\[\baselineskip]
+January 31, 2009\\[\baselineskip]
+Dissertation directed by\\[\baselineskip]
+Robert J. Harrington\\Professor of Engineering and Applied Science %you can customize all these dates, professor's name
+\end{center}
+
+% display page numbers in the footer and centered. Start with roman numerals %
+\pagestyle{plain}
+\setcounter{page}{1}
+\pagenumbering{roman}
+\newpage
+
+\doublespacing
+\noindent The School of Engineering and Applied Science of The George Washington
+University certifies that [your full name] has passed the Final Examination for the
+degree of Doctor of Philosophy as of [date of dissertation defense]. This is the
+final and approved form of the dissertation.
+\begin{center}
+\singlespacing
+{\normalsize [Title of dissertation in all the style used for the title here should
+match the style on the title page]}\\[\baselineskip]
+{\normalsize [student's name]}
+\end{center}
+
+\noindent Dissertation Research Committee:\\
+
+\hfill\begin{minipage}{5in}
+{[dissertation directors full name, professorial title, and the label Dissertation
+Director \bf use Graduate Bulletin for correct listings]}\\
+{[if a co-director: his/her full name, title, and the label Co-Director after both
+co-directors]}\\
+{[committee member€™s full name, title, Committee Member]}\\
+{[committee member€™s full name, title, Committee Member]} %substitute in your information
+
+\end{minipage}
+
+\newpage
+
+\noindent {\Large this page is optional}
+\vspace*{\fill}
+\begin{center}
+\singlespacing
+$\copyright$ Copyright [year degree conferred] by [Your Name]\\ All rights reserved
+\end{center}
+\vspace*{\fill}
+\newpage
+
+\section{\protect\centering{Dedication}}
+The author wishes to "[Type dedication. Text Must be double-spaced]"
+\doublespacing
+
+\newpage
+\section{\protect \centering Acknowledgments}
+The author wishes to "[Type acknowledgment. Text Must be double-spaced]"
+\doublespacing
+
+\newpage
+\section{\protect \centering Abstract}
+\begin{center}
+\singlespacing
+{\normalsize Dissertation Title in Initial Capitals and Small Letters(single spaced if more than one line)}
+\end{center}
+"[Type abstract body here. TEXT MUST be double-spaced.]"
+\doublespacing
+
+\newpage
+\newgeometry{top=1in, bottom=1in, left=1.25in, right=1.25in}
+\tableofcontents
+\restoregeometry
+
+\newpage
+\cleardoublepage
+\phantomsection \label{listoffig}
+\addcontentsline{toc}{section}{\hspace{1.5pt} List of Figures}
+\begin{center}
+\listoffigures
+\end{center}
+
+\newpage
+\cleardoublepage
+\phantomsection \label{listoftab}
+\addcontentsline{toc}{section}{\hspace{1.5pt} List of Tables}
+\normalsize
+
+\begin{center}
+\listoftables
+\end{center}
+
+\newpage
+\cleardoublepage
+\section {\protect \centering List of Acronyms}
+\doublespacing
+
+\newpage
+\section{\protect \centering List of Symbols}
+\doublespacing
+\begin{itemize}
+\addtolength{\itemindent}{-0.25in}
+\item[1]{x} \hspace{0.5in} Name of Definition of symbol x
+\item[2]{y}
+\item[3]{z}
+\end{itemize}
+
+\newpage
+\section {\protect \centering Glossary of Terms(optional)}
+\doublespacing
+\begin{itemize}
+\addtolength{\itemindent}{0.25in}
+\item[Term 1]: Start Definition here
+\item[Term 2]: Start Definition here
+\end{itemize}
+
+
+\input{./tex/chapter1.tex} % include the chapter as a separate file
+
+\input{./tex/chapter2.tex} % include the chapter as a separate file
+
+\input{./tex/chapter3.tex} % include the chapter as a separate file
+
+\input{./tex/chapter4.tex} % include the chapter as a separate file
+
+\input{./tex/chapter5.tex} % include the chapter as a separate file
+
+\input{./tex/references.tex} % include the chapter as a separate file
+
+\input{./tex/appendixA.tex} % include the chapter as a separate file
+
+\input{./tex/appendixB.tex} % include the chapter as a separate file
+
+
+\end{document}
