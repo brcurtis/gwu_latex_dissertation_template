@@ -1,0 +1,93 @@
+% practice.tex - Our first LaTeX example!
+
+\documentclass{article}
+
+% preamble - start
+\usepackage{textcomp}
+\usepackage{hyperref} % makes ref clickable
+% preamble - end
+
+\begin{document}
+
+\title{This is my title}
+\author{Edwin Torres}
+
+\maketitle
+
+\tableofcontents  % Typeset twice, because this takes the previous compile cycle
+
+\newpage
+
+This is how you \underline{underline}.
+This is how you \emph{emphasize}. % i.e. italicize
+
+
+I like BASIC\@. What about you? % ends sentence after C
+I like BASIC. What about you? % does not end sentence after C
+
+% avoiding ligatures (notice how ff run together in first word)
+\Large shelfful shelf\mbox{}ful
+
+% this is different than using three dots (...)
+Here is an ellipsis \ldots
+
+% textcomp package lets's us do this...
+30 \textcelsius{} is
+86 \textdegree{}F.
+
+% important: specifying single and double-quotes:
+``Please press the `x' key.''   ABC 
+
+% apostrophe
+It\textsc{\char13}s a nice day!
+
+It\textsc{\char13}s $-30\,^{\circ}\mathrm{C}$.
+I will soon start to
+super-conduct.
+
+
+
+ read\slash write
+
+\section{Example 1}
+% Example 1
+\ldots when Einstein introduced his formula
+\begin{equation}
+ e = m \cdot c^2 \; ,
+\end{equation}
+which is at the same time the most widely known
+and the least well understood physical formula.
+
+A reference to this subsection \label{sec:this} 
+looks like: ``see Section~\ref{sec:this}. on
+Page~\pageref{sec:this}.''
+
+
+\section{Example 2}
+% Example 2
+\ldots from which follows Kirchhoffs current law:
+\begin{equation}
+ \sum_{k=1}^{n} I_k = 0 \; .
+\end{equation}
+
+
+Kirchhoffs€™ voltage law can be derived \ldots
+
+\section{Example 3}
+% Example 3
+\ldots which has several advantages.
+
+\begin{equation}
+ I_D = I_F - I_R
+\end{equation}
+is the core of a very different transistor model. \ldots
+
+This is an example of a footnote\footnote{This word has medieval origins.} .
+I like to catch fluke\footnote{The fluke is also known as the summer flounder.} at the Jersey Shore .
+
+
+
+
+
+
+\end{document}
